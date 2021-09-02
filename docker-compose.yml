@@ -1,0 +1,27 @@
+version: '3'
+services:
+  ctf:
+    container_name: ctf
+    environment:
+      - EMAIL=${EMAIL}
+      - EMAIL_PASS=${EMAIL_PASS}
+      - TEMP_POST_PASS=${TEMP_POST_PASS}
+      - SEND_EMAIL=${SEND_EMAIL} 
+      - NEOKEY=${NEOKEY}
+      - PATHWAY_DOMAIN=${PATHWAY_DOMAIN}
+      - CURRENT_DOMAIN=${CURRENT_DOMAIN}
+      - PORT=${PORT}
+    restart: always
+    build: .
+    ports:
+      - '3000:3000'
+    restart: always
+#     volumes: ['./:/var/www/html']
+    environment:
+      VIRTUAL_HOST: orders.cbtseminary.com
+      LETSENCRYPT_HOST: orders.cbtseminary.com
+      LETSENCRYPT_EMAIL: soriano@cbtseminary.org
+networks:
+  default:
+    external:
+      name: nginx-proxy
