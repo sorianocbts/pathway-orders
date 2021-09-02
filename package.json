@@ -1,0 +1,46 @@
+{
+  "name": "pathway-orders",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@devexpress/dx-core": "^2.7.3",
+    "@devexpress/dx-react-core": "^2.7.3",
+    "@devexpress/dx-react-grid": "^2.7.3",
+    "@devexpress/dx-react-grid-bootstrap4": "^2.7.3",
+    "@devexpress/dx-react-grid-export": "^2.7.6",
+    "@devexpress/dx-react-grid-material-ui": "^2.7.3",
+    "@material-ui/core": "^4.11.1",
+    "@material-ui/data-grid": "^4.0.0-alpha.10",
+    "@material-ui/icons": "^4.9.1",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.1",
+    "@testing-library/user-event": "^12.2.2",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.5.3",
+    "cors": "^2.8.5",
+    "file-saver": "^2.0.5",
+    "json-2-csv": "^3.14.4",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "next": "11.1.0",
+    "next-connect": "^0.10.2",
+    "nodemailer": "^6.6.3",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.0",
+    "styled-components": "^5.2.1",
+    "use-http": "^1.0.15",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.0"
+  }
+}
