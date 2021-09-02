@@ -1,7 +1,7 @@
 version: '3'
 services:
-  ctf:
-    container_name: ctf
+  pathway-orders:
+    container_name: pathway-orders
     environment:
       - EMAIL=${EMAIL}
       - EMAIL_PASS=${EMAIL_PASS}
