@@ -26,7 +26,7 @@ const handler = async (req, res) => {
     const today = moment().format('dddd')
     const searchDate = moment().subtract(_formatDate(today), 'days').format('YYYY-MM-DD')
     let apidata = await _getData()
-    res.status(200).json({ day: searchDate, serverData: apidata })
+    res.status(200).json({ day: searchDate, serverData: "apidata" })
 }
 
 export default handler
