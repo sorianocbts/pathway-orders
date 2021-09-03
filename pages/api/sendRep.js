@@ -38,11 +38,27 @@ function sendReport(file) {
 
 
 const handler = async (req, res) => {
-    if (req.method === 'GET') {
-        res.statusCode = 200
-        res.setHeader('Content-Type', 'application/json')
-        res.end(JSON.stringify({ name: `Thanks` }))
-    } else if (req.method === 'POST' && req.body.pass === process.env.TEMP_POST_PASS) {
+    // if (req.method === 'GET') {
+    //     res.statusCode = 200
+    //     res.setHeader('Content-Type', 'application/json')
+    //     res.end(JSON.stringify({ name: `Thanks` }))
+    // } else if (req.method === 'POST' && req.body.pass === process.env.TEMP_POST_PASS) {
+    //     let dataRes = await _getItems(_formatData(await _getData()))
+    //     _convertData(await dataRes)
+
+    //     res.statusCode = 200
+    //     res.setHeader('Content-Type', 'application/json')
+    //     res.end(JSON.stringify({ name: dataRes }))
+    //     return
+    // }
+
+
+
+
+
+
+
+    if (req.body.pass === process.env.TEMP_POST_PASS) {
         let dataRes = await _getItems(_formatData(await _getData()))
         _convertData(await dataRes)
 
@@ -50,6 +66,11 @@ const handler = async (req, res) => {
         res.setHeader('Content-Type', 'application/json')
         res.end(JSON.stringify({ name: dataRes }))
         return
+    }
+    else {
+        res.statusCode = 200
+        res.setHeader('Content-Type', 'application/json')
+        res.end(JSON.stringify({ name: `Thanks` }))
     }
 
 }
